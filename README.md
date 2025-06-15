@@ -1,26 +1,34 @@
 # 🎵 오늘의 감성 노래 추천기
 
-사용자의 기분과 시간대를 입력하면,  
-AI가 감성적인 노래 3곡을 추천해주는 웹 애플리케이션입니다.
+당신의 **현재 기분**과 **시간대**를 입력하면,  
+AI가 당신에게 꼭 어울리는 감성적인 노래 3곡을 추천해주는 **웹 애플리케이션**입니다.  
 
-Google Gemini API를 활용하여  
-기분과 시간에 어울리는 노래와 간단한 설명을 제공합니다.
+Google의 **Gemini API**를 활용하여  
+그 순간의 분위기와 감정에 맞는 노래를 엄선하고,  
+각 곡에 대해 짧지만 감성적인 설명까지 덧붙여드립니다.
+
+> 🎧 오늘 하루, 음악으로 감정을 위로받고 싶다면?  
+> 이 앱이 당신의 감성 큐레이터가 되어드립니다.
 
 ---
 
 ## 💻 기술 스택
 
-- HTML / CSS / JavaScript
-- 백엔드 API: Google Gemini API (Vercel 배포)
-- 프론트엔드 배포: GitHub Pages
+- **Frontend**: HTML / CSS / JavaScript  
+- **Backend**: Google Gemini API (Node.js, Vercel 서버리스 함수로 구현)  
+- **배포**:
+  - 프론트엔드: GitHub Pages
+  - 백엔드 API: Vercel
 
 ---
 
 ## ✨ 주요 기능
 
-- 사용자의 기분(mood)과 시간대(timeOfDay)를 입력받음
-- AI가 노래 3곡을 추천하고, 각 곡에 대한 감성적인 설명 제공
-- 결과는 실시간으로 웹 페이지에 표시됨
+- 사용자의 감정(`mood`)과 하루 중 시간(`timeOfDay`)을 입력받아 AI에 전달
+- AI가 해당 상황에 어울리는 노래 3곡을 추천
+- 각 노래마다 감성적인 한 줄 설명도 함께 제공
+- 추천 결과는 웹 페이지에 실시간으로 표시됨
+- Vercel 서버리스 함수와 연동되어 빠른 응답
 
 ---
 
@@ -37,13 +45,3 @@ Google Gemini API를 활용하여
 
 ---
 
-## 🔗 API 연동 정보
-
-- API 주소: `https://internet-assign2.vercel.app/api`
-- 요청 방식: `POST`
-- 요청 형식:
-  ```json
-  {
-    "mood": "우울해요",
-    "timeOfDay": "밤이에요"
-  }
