@@ -27,7 +27,7 @@ Google Gemini API를 활용하여
 ## 🖱️ 사용 방법
 
 1. 웹페이지 접속:  
-   👉 [https://yourid.github.io/duksung-music-frontend/](https://yourid.github.io/duksung-music-frontend/)
+   👉 [https://seojin122.github.io/internet_assign_fortune/]
 
 2. 기분을 입력하고 시간대를 선택
 
