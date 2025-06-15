@@ -50,22 +50,27 @@
     async function getRecommendation() {
       const mood = document.getElementById("mood").value.trim();
       const timeOfDay = document.getElementById("timeOfDay").value;
+      const resultDiv = document.getElementById("result");
 
       if (!mood) {
         alert("기분을 입력해 주세요.");
         return;
       }
 
-      const response = await fetch("https://인터넷-assign2.vercel.app/api", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ mood, timeOfDay })
-      });
+      try {
+        const response = await fetch("https://internet-assign2.vercel.app/api/index.js", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ mood, timeOfDay })
+        });
 
-      const data = await response.json();
-      document.getElementById("result").textContent = data.answer || data.error || "오류 발생";
+        const data = await response.json();
+        resultDiv.textContent = data.answer || data.error || "추천 결과를 받아올 수 없습니다.";
+      } catch (error) {
+        resultDiv.textContent = "오류가 발생했습니다: " + error.message;
+      }
     }
   </script>
 </body>
